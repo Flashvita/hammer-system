@@ -1,0 +1,4 @@
+.ginignore
+**/__pycache__/**
+debug.log
+**.ipynb
