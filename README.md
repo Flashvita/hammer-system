@@ -1,9 +1,9 @@
 ## Тестовое задание компании ![Alt text](image.png)
 ### Приложение упакованно в docker контейнеры(django, postgres, redis)
 ### Разворачивать с помощью docker
-#### Переходим в рабочую деректорию проекта и создаём.env файл:
+#### Переходим в рабочую деректорию проекта и создаём .env файл:
     cd hammer-system && nano app/.env
-#### Добавляем данные созданной базы postgresql и secter_key django:
+#### Добавляем данные:
     DB_NAME='db_name'
     DB_USER='db_user'
     DB_PASSWORD='db_password'
