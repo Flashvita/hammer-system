@@ -2,7 +2,7 @@
 ### Приложение упакованно в docker контейнеры(django, postgres, redis)
 ### Разворачивать с помощью docker
 #### Переходим в рабочую деректорию проекта и создаём .env файл:
-    cd hammer-system && nano app/.env
+    cd hammer-system && nano .env
 #### Добавляем данные:
     DB_NAME='db_name'
     DB_USER='db_user'
@@ -15,7 +15,7 @@
 
 ### Build and run project with docker:
     docker-compose build
-    docker-compose up
+    docker-compose up -d
 ##### Документация redoc: 
     0.0.0.0:8000/api/docs/redoc
 ##### Админка django:
