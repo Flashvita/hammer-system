@@ -13,11 +13,14 @@
     REDIS_PORT='6379'
     DEBUG=True
 
-### Build and run project with docker
-#### docker-compose build
-#### docker-compose up
-##### Документация redoc: 0.0.0.0:8000/api/docs/redoc
-##### Админка django: 0.0.0.0:8000/admin/
-##### Контейнер django: docker compose exec -it django
+### Build and run project with docker:
+    docker-compose build
+    docker-compose up
+##### Документация redoc: 
+    0.0.0.0:8000/api/docs/redoc
+##### Админка django:
+    0.0.0.0:8000/admin/
+##### Контейнер django: 
+    docker compose exec -it django
 ##### Создать суперпользователя:
     python manage.py createsuperuser
