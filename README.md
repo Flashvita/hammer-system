@@ -1,7 +1,9 @@
 ## Тестовое задание компании ![Alt text](image.png)
 #### Приложение упакованно в docker контейнеры(django, postgres, redis)
 ### Разворачивать с помощью docker
-### В корне проекта создать файл .env с данными 
+### Клонируем репозиторий:
+    git clone https://github.com/Flashvita/hammer-system.git
+### В корне проекта создать файл .env с данными: 
     DB_NAME='db_name'
     DB_USER='db_user'
     DB_PASSWORD='db_password'
@@ -16,4 +18,6 @@
 #### docker-compose up
 ##### Документация redoc: 0.0.0.0:8000/api/docs/redoc
 ##### Админка django: 0.0.0.0:8000/admin/
-#### Контейнер django: docker compose exec -it django
+##### Контейнер django: docker compose exec -it django
+##### Создать суперпользователя:
+    python manage.py createsuperuser
