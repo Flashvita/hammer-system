@@ -4,22 +4,26 @@ version: "3.9"
 services:
   django:
     build: .
-    command:  python /app/backend/manage.py runserver 0.0.0.0:8000
+    command:  >
+      sh -c "
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+
     container_name: django
     depends_on:
-      - migrations
+      #- migrations
       - postgres
     ports:
       - 8000:8000 
     volumes:
       - .:/app/backend
-  migrations:
-    image: django
-    command: python manage.py migrate
-    volumes:
-      - .:/app/backend
-    depends_on:
-      - postgres
+  # migrations:
+  #   image: django
+  #   command: python manage.py migrate
+  #   volumes:
+  #     - .:/app/backend
+  #   depends_on:
+  #     - postgres
   postgres:
     container_name: postgres
     image: postgres
